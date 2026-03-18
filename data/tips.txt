@@ -1,0 +1,10 @@
+React memo component
+
+No matter what components re-render when parent re-renders
+
+To avoid, we need to use React.memo .. by default it does props comparisons - but we can pass a second argument which does that equality check between prev and new props.
+
+React.memo(<Component />, (prev, next) => prev.value === next.value && ... )
+
+// if true.. that means we are saying both are same.. so skips re-render
+
